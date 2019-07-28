@@ -1,22 +1,29 @@
 {
-  "name": "vscode-tray",
-  "version": "1.0.0",
-  "description": "A simple Electron tray application to manage VSCode projects.",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Beaast-exe/vscode-tray.git"
-  },
-  "author": "Beaast-exe",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Beaast-exe/vscode-tray/issues"
-  },
-  "homepage": "https://github.com/Beaast-exe/vscode-tray#readme",
-  "dependencies": {
-    "electron": "^5.0.8"
-  }
+    "name": "vscode-tray",
+    "productName": "VSCode Tray",
+    "version": "1.0.0",
+    "description": "A simple Electron tray application to manage VSCode projects.",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "win": "electron-packager . \"VSCode Tray\" --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/iconTemplate.png --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"VSCode Tray\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Beaast-exe/vscode-tray.git"
+    },
+    "author": "Beaast-exe",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Beaast-exe/vscode-tray/issues"
+    },
+    "homepage": "https://github.com/Beaast-exe/vscode-tray#readme",
+    "dependencies": {
+        "cross-spawn": "^6.0.5",
+        "electron-store": "^4.0.0"
+    },
+    "devDependencies": {
+        "electron": "^5.0.8",
+        "electron-packager": "^14.0.3"
+    }
 }
