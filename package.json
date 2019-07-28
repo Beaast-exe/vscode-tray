@@ -1,0 +1,22 @@
+{
+  "name": "vscode-tray",
+  "version": "1.0.0",
+  "description": "A simple Electron tray application to manage VSCode projects.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beaast-exe/vscode-tray.git"
+  },
+  "author": "Beaast-exe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Beaast-exe/vscode-tray/issues"
+  },
+  "homepage": "https://github.com/Beaast-exe/vscode-tray#readme",
+  "dependencies": {
+    "electron": "^5.0.8"
+  }
+}
