@@ -2,3 +2,5 @@ node_modules/
 dist/
 release-builds/
 release/
+yarn.lock
+yarn-error.log
