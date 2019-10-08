@@ -25,17 +25,21 @@ function render() {
 
     const items = projects.map(({ name, path }) => ({
         label: name,
+        icon: resolve(__dirname, 'assets', 'iconProjects.png'),
         submenu: [
             {
-                label: 'Abrir no VSCode',
+                label: `Abrir no VSCode`,
+                icon: resolve(__dirname, 'assets', 'iconVscode.png'),
                 click: () => spawn('code', [path])
             },
-			{
-				label: 'Abrir no Explorer',
-				click: () => spawn('explorer', [path])
-			},
+            {
+                label: 'Abrir no Explorer',
+                icon: resolve(__dirname, 'assets', 'iconExplorer.png'),
+                click: () => spawn('explorer', [path])
+            },
             {
                 label: 'Remover',
+                icon: resolve(__dirname, 'assets', 'iconDelete.png'),
                 click: () => {
                     store.set('projects', JSON.stringify(projects.filter(item => item.path !== path)));
                     render();
@@ -47,6 +51,7 @@ function render() {
     const contextMenu = Menu.buildFromTemplate([
         {
             label: 'Adicionar novo projeto',
+            icon: resolve(__dirname, 'assets', 'iconAdd.png'),
             click: () => {
                 const result = dialog.showOpenDialog({ properties: ['openDirectory'] });
 
@@ -76,6 +81,7 @@ function render() {
         {
             type: 'normal',
             label: 'Fechar VSCode Tray',
+            icon: resolve(__dirname, 'assets', 'iconClose.png'),
             role: 'quit',
             enabled: true
         }
