@@ -30,6 +30,10 @@ function render() {
                 label: 'Abrir no VSCode',
                 click: () => spawn('code', [path])
             },
+			{
+				label: 'Abrir no Explorer',
+				click: () => spawn('explorer', [path])
+			},
             {
                 label: 'Remover',
                 click: () => {
