@@ -38,6 +38,20 @@ function render() {
                 click: () => spawn('explorer', [path])
             },
             {
+                label: 'Ações do NODE',
+                icon: resolve(__dirname, 'assets', 'iconNode.png'),
+                submenu: [
+                    {
+                        label: 'Script: START',
+                        click: () => spawn('start', [`${[path]}`, 'start.bat'], { cwd: `${[path]}` })
+                    },
+                    {
+                        label: 'Script: DEV',
+                        click: () => spawn('start', [`${[path]}`, 'dev.bat'], { cwd: `${[path]}` })
+                    }
+                ]
+            },
+            {
                 label: 'Remover',
                 icon: resolve(__dirname, 'assets', 'iconDelete.png'),
                 click: () => {
